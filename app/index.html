@@ -1,0 +1,44 @@
+<head>
+  <meta charset="utf-8">
+  <title>University Chatbot</title>
+</head>
+<body>
+  <h1>
+  Hello welcome to My Uni Chatbot !!
+  </h1>
+  <div id="webchat">
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.5.0/lib/index.min.js"></script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "University Bot",
+    subtitle: "Chat With US!",
+    params: {"storage": "session"}
+  })
+</script>
+</body>
+
+<!-- <html>
+  <head>
+    <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+  </head>
+  <body>
+    <div class="chat-container"></div>
+  
+    <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"></script>
+    <script type="text/javascript">
+      var chatroom = new window.Chatroom({
+        host: "http://localhost:5005",
+        title: "Chat with Sarah",
+        container: document.querySelector(".chat-container"),
+        welcomeMessage: "Hi, I am Sarah. How may I help you?",
+        speechRecognition: "en-US",
+        voiceLang: "en-US"
+      });
+      chatroom.openChat();
+    </script>
+  </body>
+</html>  -->
